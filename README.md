@@ -4,4 +4,4 @@
 * Тест (Test)
 * Вопрос (Question)
 * Ответ (Answer)
-* Результат (Result)
+* Категория (Category)
