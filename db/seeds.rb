@@ -6,19 +6,19 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-categories = Category.create([
+categories = Category.create!([
   { title: "Frontend" },
   { title: "Backend" },
   { title: "Machine learning" },
 ])
 
-users = User.create([
+users = User.create!([
   { name: "Maxim", email: "brugunt@gmail.com", password: "f75hd5" },
   { name: "Polina", email: "poly_raven@gmail.com", password: "dfd456sd" },
   { name: "Dmitry", email: "dmitry@tut.by", password: "0sdret54" },
 ])
 
-tests = Test.create([
+tests = Test.create!([
   { title: "HTML", category_id: categories[0].id },
   { title: "JavaScript", level: 1, category_id: categories[0].id },
   { title: "Ruby", level: 2, category_id: categories[1].id },
@@ -26,7 +26,7 @@ tests = Test.create([
   { title: "Python", level: 2, category_id: categories[2].id },
 ])
 
-questions = Question.create([
+questions = Question.create!([
   { body: "What is the <a> tag used for?", test_id: tests[0].id },
   { body: "Choose the right statements for callbacks", test_id: tests[1].id },
   { body: "How many messages will be printed to the console? for(var i = 10; i < 35; i += 5) { console.log(i); }", test_id: tests[1].id },
@@ -36,7 +36,7 @@ questions = Question.create([
   { body: "How many arguments can lamda function take?", test_id: tests[4].id }, #any number of arguments
 ])
 
-Answer.create([
+Answer.create!([
   { body: "To define header", question_id: questions[0].id },
   { body: "To print text", question_id: questions[0].id },
   { body: "To create links", correct: true, question_id: questions[0].id },
@@ -66,7 +66,7 @@ Answer.create([
   { body: "No arguments", question_id: questions[6].id },
 ])
 
-PassingTest.create([
+PassingTest.create!([
   { user_id: users[0].id, test_id: tests[0].id },
   { user_id: users[0].id, test_id: tests[2].id },
   { user_id: users[1].id, test_id: tests[4].id, passed: true },
