@@ -1,6 +1,6 @@
 class QuestionsController < ApplicationController
-  before_action :initialize_question, only: %i[show destroy]
-  before_action :initialize_test, only: %i[create index]
+  before_action :find_question, only: %i[show destroy]
+  before_action :find_test, only: %i[create index]
   rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_question_not_found
 
   def index
@@ -15,7 +15,12 @@ class QuestionsController < ApplicationController
   end
 
   def create
-    @test.questions.create(question_params)
+    @question = @test.questions.build(question_params)
+    if @question.save
+      redirect_to @question
+    else
+      render :new
+    end
     render plain: "Question was successfully created!"
   end
 
@@ -30,11 +35,11 @@ class QuestionsController < ApplicationController
     params.require(:question).permit(:body)
   end
 
-  def initialize_question
+  def find_question
     @question = Question.find(params[:id])
   end
 
-  def initialize_test
+  def find_test
     @test = Test.find(params[:test_id])
   end
 
