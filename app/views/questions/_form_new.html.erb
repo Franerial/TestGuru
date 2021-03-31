@@ -1,0 +1,11 @@
+<%= form_with model: @question, :url => "/tests/#{params[:test_id]}/questions", local: true do |form| %>
+    
+    <p>
+        <%= form.label :body %><br>
+            <%= form.text_field :body %>
+    </p><br>
+
+    <p>
+        <%= form.submit %>
+    </p>
+<% end %>
