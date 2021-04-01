@@ -1,5 +1,5 @@
-<h1>Edit <%= question_header(@test) %> Question</h1>
-
-<%= render "form_edit" %>
-
-<%= link_to "Back to linked test", test_path(@test) %>
+<h1> <%= question_header(@question, @question.test) %> </h1>
+<%= form_with model: @question, local: true do |form| %>
+  <%= render partial: "form_fields", locals: { form: form } %>
+<% end %>
+<%= link_to "Back to linked test", test_path(@question.test) %>

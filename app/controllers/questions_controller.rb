@@ -3,12 +3,7 @@ class QuestionsController < ApplicationController
   before_action :find_test, only: %i[create index new]
   rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_question_not_found
 
-  def index
-    render inline: "<%@test.questions.each_with_index do |question, number|%> <%= number + 1 %>. <%= question.body%> <br> <%end%>"
-  end
-
   def show
-    @test = @question.test
   end
 
   def new
@@ -37,9 +32,8 @@ class QuestionsController < ApplicationController
   end
 
   def destroy
-    @test = @question.test
     @question.destroy
-    redirect_to test_path(@test)
+    redirect_to test_path(@question.test)
   end
 
   private
