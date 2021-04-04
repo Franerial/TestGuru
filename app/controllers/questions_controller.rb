@@ -1,17 +1,12 @@
 class QuestionsController < ApplicationController
-  before_action :find_question, only: %i[show destroy]
-  before_action :find_test, only: %i[create index]
-  rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_question_not_found
-
-  def index
-    render inline: "<%@test.questions.each_with_index do |question, number|%> <%= number + 1 %>. <%= question.body%> <br> <%end%>"
-  end
+  before_action :find_question, only: %i[show destroy update edit]
+  before_action :find_test, only: %i[create new]
 
   def show
-    render inline: "<%= @question.body%>"
   end
 
   def new
+    @question = @test.questions.build
   end
 
   def create
@@ -21,12 +16,23 @@ class QuestionsController < ApplicationController
     else
       render :new
     end
-    render plain: "Question was successfully created!"
+  end
+
+  def edit
+    @test = @question.test
+  end
+
+  def update
+    if @question.update(question_params)
+      redirect_to @question
+    else
+      render :edit
+    end
   end
 
   def destroy
     @question.destroy
-    render plain: "Question was successfully deleted!"
+    redirect_to test_path(@question.test)
   end
 
   private
@@ -41,9 +47,5 @@ class QuestionsController < ApplicationController
 
   def find_test
     @test = Test.find(params[:test_id])
-  end
-
-  def rescue_with_question_not_found
-    render inline: "Question with id=<%=params[:id]%> was not found!"
   end
 end

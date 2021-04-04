@@ -1,0 +1,28 @@
+<h3>Test Title:</h3>
+<p><%= @test.title %></p>
+<h3>Test level:</h3>
+<p><%= @test.level %></p>
+<h3>Test Category:</h3>
+<p><%= @test.category.title %></p>
+<h3>Test Author:</h3>
+<% if @test.author.present? %>
+  <p><%= @test.author.email %></p>
+<% else %>
+  <p>No author</p>
+<% end %>
+<h3>Test questions:</h3>
+<% if @test.questions.present? %>
+  <table>
+    <tr>
+      <th>Body</th>
+      <th colspan="3">Actions</th>
+    </tr>
+    <%= render @test.questions %>
+  </table>
+<% else %>
+  <p>No questions for this test yet</p>
+<% end %>
+<br>
+<%= link_to "Create new question", new_test_question_path(@test) %><br>
+<%= link_to "Edit test", edit_test_path(@test) %><br>
+<%= link_to "Back to tests page", tests_path %>

@@ -1,0 +1,6 @@
+<h3>Question Body:</h3>
+<p><%= @question.body %></p>
+<h3>Question Test name:</h3>
+<p><%= @question.test.title %></p>
+<%= link_to "Edit question", edit_question_path(@question) %><br>
+<%= link_to "Back to linked test", test_path(@question.test) %>
