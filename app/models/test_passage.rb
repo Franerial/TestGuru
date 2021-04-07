@@ -6,8 +6,18 @@ class TestPassage < ApplicationRecord
   before_validation :before_validation_set_first_question, on: :create
   before_update :before_update_set_next_question
 
+  MIN_SUCCESSFULL_RESULT = 85
+
   def completed?
     current_question.nil?
+  end
+
+  def successfully_passed?
+    result_percentage > MIN_SUCCESSFULL_RESULT
+  end
+
+  def result_percentage
+    (correct_questions.to_f / test.questions.count) * 100
   end
 
   def accept!(answer_ids)
@@ -32,8 +42,7 @@ class TestPassage < ApplicationRecord
   end
 
   def correct_answer?(answer_ids)
-    correct_answers_count = correct_answers.count
-    (correct_answers_count == correct_answers.where(id: answer_ids).count) && (correct_answers_count == answer_ids.count)
+    correct_answers.ids.sort == answer_ids.map(&:to_i).sort
   end
 
   def correct_answers

@@ -2,8 +2,7 @@ class QuestionsController < ApplicationController
   before_action :find_question, only: %i[show destroy update edit]
   before_action :find_test, only: %i[create new]
 
-  def show
-  end
+  def show; end
 
   def new
     @question = @test.questions.build

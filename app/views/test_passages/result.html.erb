@@ -1,9 +1,12 @@
-<% if @result_percentage < 85 %>
-  <h1>The <%= @test_passage.test.title %> test wasn't passed! :( Your result is:</h1>
-  <h2 style="color:red;"><%= format('%.2f', @result_percentage) %> %</h2>
-<%else%>
+<% if @test_passage.successfully_passed? %>
   <h1>The <%= @test_passage.test.title %> test was successfully passed! Congratulations! Your result is:</h1>
-  <h2 style="color:green;"><%= format('%.2f', @result_percentage) %> %</h2>
+  <div class = "successfull_result">
+    <h2><%= format('%.2f', @test_passage.result_percentage) %> %</h2>
+  </div>
+<% else %>
+  <h1>The <%= @test_passage.test.title %> test wasn't passed! :( Your result is:</h1>
+  <div class="unsuccessfull_result">
+    <h2><%= format('%.2f', @test_passage.result_percentage) %> %</h2>
+  </div>
 <% end %>
-
 <%= link_to "Back to tests page", tests_path %>
