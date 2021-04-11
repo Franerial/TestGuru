@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_06_172931) do
+ActiveRecord::Schema.define(version: 2021_04_10_155349) do
 
   create_table "answers", force: :cascade do |t|
     t.text "body", null: false
@@ -62,7 +62,7 @@ ActiveRecord::Schema.define(version: 2021_04_06_172931) do
   create_table "users", force: :cascade do |t|
     t.string "name", limit: 25, null: false
     t.string "email", limit: 25, null: false
-    t.string "password", limit: 25, null: false
+    t.string "password_digest", limit: 25, null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
