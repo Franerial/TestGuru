@@ -8,6 +8,6 @@ module ApplicationHelper
   end
 
   def show_flash_message(message)
-    tag.p(flash[:alert], class: "flash alert") if flash[message]
+    tag.p(flash[:alert], class: "flash alert") if flash[:alert]
   end
 end
