@@ -3,4 +3,4 @@
   <%= render "shared/errors", resource: @question %>
   <%= render partial: "form_fields", locals: { form: form } %>
 <% end %>
-<%= link_to "Back to linked test", test_path(@question.test) %>
+<%= link_to "Back to linked test", admin_test_path(@question.test) %>
