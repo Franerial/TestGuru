@@ -3,9 +3,9 @@
 <h3>Question Test name:</h3>
 <p><%= @question.test.title %></p>
 <h3>Answers</h3>
-<%= link_to 'Create new answer', new_question_answer_path(@question)%>
+<%= link_to 'Create new answer', new_admin_question_answer_path(@question)%>
 <ol>
   <%= render @question.answers%>
 </ol>
-<%= link_to "Edit question", edit_question_path(@question) %><br>
+<%= link_to "Edit question", edit_admin_question_path(@question) %><br>
 <%= link_to "Back to linked test", admin_test_path(@question.test) %>
