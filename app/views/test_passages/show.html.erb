@@ -1,6 +1,6 @@
-<h1>Pass the <%= @test_passage.test.title %> test</h1>
-<h2> Total number of questions: <%= @test_passage.test.questions.size %> </h2>
-<h2> The number of current question: <%= @test_passage.current_question_number%> </h2>
+<h1> <%= t('.passing', test: @test_passage.test.title) %> </h1>
+<h2> <%= t('.questions_num', size: @test_passage.test.questions.size) %> </h2>
+<h2> <%= t('.current_question_num', num: @test_passage.current_question_number) %> </h2>
 <b>
   <%= @test_passage.current_question.body %>
 </b>
@@ -11,5 +11,5 @@
       <%= b.label %>
     </p>
   <% end %>
-  <p><%= form.submit 'Next' %></p>
+  <p><%= form.submit t('.next') %></p>
 <% end %>

@@ -1,0 +1,112 @@
+ru:
+  helpers:
+    submit:
+      test:
+        create: "Создать тест"
+        update: "Редактировать тест"
+    label:
+      test:
+        title: "Заголовок"
+        level: "Уровень"
+        category_id: "Категория"
+    select:
+      prompt: "Выберите"
+    application_helper:
+      repo: "Гит репозиторий проекта"
+  admin:
+    tests:
+      create:
+        success: "Тест успешно создан!"
+      index:
+        header: "Доступные тесты"
+        title: "Название"
+        level: "Уровень"
+        category: "Категория"
+        author: "Автор"
+        questions_num: "Количество вопросов"
+        actions: "Действия"
+        create_new_test: "Создать новый тест"
+        admin_panel: "TestGuru Admin Panel"
+      test:
+        show: "Открыть"
+        edit: "Редактировать"
+        delete: "Удалить"
+        no_author: "Автор отсутствует"
+      new:
+        create_test: "Создать новый тест"
+        back: "Назад на страницу с тестами"
+      edit:
+        edit: "Редактирование %{test} теста"
+        back: "Назад на страницу с тестами"
+      show:
+        title: "Название теста:"
+        level: "Уровень теста:"
+        category: "Категория теста:"
+        author: "Автор теста:"
+        no_author: "Автор отсутствует"
+        questions: "Список вопросов теста:"
+        body: "Вопрос"
+        actions: "Список действий"
+        create_new_question: "Создать новый вопрос"
+        edit: "Редактировать тест"
+        back: "Назад на страницу с тестами"
+    questions:
+      question:
+        show: "Открыть"
+        edit: "Редактировать"
+        delete: "Удалить"
+    nav:
+      admin_panel: "TestGuru Панель администратора"
+      logout: "Выход"
+      welcome: "Добро пожаловать"
+      guru: "Гуру"
+  shared:
+    footer:
+      year: "Текущий год"
+      author: "Автор: Рябов Максим"
+      project: "Учебный проект в рамках обучения Rails в онлайн школе Thinknetica"
+    navbar:
+      logout: "Выход"
+      welcome: "Добро пожаловать"
+      guru: "Гуру"
+    errors:
+      header:
+        few: "Обнаружено %{count} ошибки:"
+        many: "Обнаружено %{count} ошибок:"
+        one: "Обнаружена %{count} ошибка:"
+        other: "Обнаружено %{count} ошибки:"
+  tests:
+    index:
+      header: "Доступные тесты"
+      title: "Название"
+      level: "Уровень"
+      category: "Категория"
+      author: "Автор"
+      questions_num: "Количество вопросов"
+      actions: "Действия"
+    test:
+      no_author: "Автор отсутствует"
+      start: "Пройти тест"
+  test_passages:
+    result:
+      unsuccess_header: "Тест %{title} не был успешно завершён! :( Ваш результат:"
+      success_header: "Тест %{title} был успешно завершён! Поздравляем! Ваш результат:"
+      back: "Назад на страницу с тестами"
+    show:
+      passing: "Прохождение %{test} теста"
+      questions_num: "Общее число вопросов: %{size}"
+      current_question_num: "Номер текущего вопроса: %{num}"
+      next: "Далее"
+  tests_mailer:
+    completed_test:
+      subject: "Вы успешно завершили тест на TestGuru!"
+  activerecord:
+    models:
+      test: "Тест"
+    attributes: 
+      test:
+        title: "Название"
+        level: "Уровень"
+        category: "Категория"
+  sessions:
+    sign_in_message: "Добро пожаловать, %{first_name} %{last_name}. Рады Вас видеть!"

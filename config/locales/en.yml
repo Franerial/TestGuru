@@ -30,4 +30,111 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  helpers:
+    submit:
+      test:
+        create: "Create Test"
+        update: "Update Test"
+    label:
+      test:
+        title: "Title"
+        level: "Level"
+        category_id: "Category"
+    select:
+      prompt: "Please select"
+    application_helper:
+      repo: "Git repository"
+  admin:
+    tests:
+      create:
+        success: "Test was successfully created!"
+      index:
+        header: "Available tests"
+        title: "Title"
+        level: "Level"
+        category: "Category"
+        author: "Author"
+        questions_num: "Number of questions"
+        actions: "Actions"
+        create_new_test: "Create new test"
+      test:
+        show: "Show"
+        edit: "Edit"
+        delete: "Delete"
+        no_author: "No author"
+      new:
+        create_test: "Create new test"
+        back: "Back to tests page"
+      edit:
+        edit: "Editing %{test} test"
+        back: "Back to tests page"
+      show:
+        title: "Test Title:"
+        level: "Test Level:"
+        category: "Test Category:"
+        author: "Test Author:"
+        no_author: "No author"
+        questions: "Test questions list:"
+        body: "Body"
+        actions: "Actions"
+        create_new_question: "Create new question"
+        edit: "Edit test"
+        back: "Back to tests page"
+    questions:
+      question:
+        show: "Show"
+        edit: "Edit"
+        delete: "Delete"
+    nav:
+      admin_panel: "TestGuru Admin Panel"
+      logout: "Logout"
+      welcome: "Welcome"
+      guru: "Guru"
+  shared:
+    footer:
+      year: "Current year"
+      author: "Author: Maxim Ryabov"
+      project: "This is an educational project in online school Thinknetica "
+    navbar:
+      welcome: "Welcome"
+      logout: "Logout"
+      guru: "Guru"
+    errors:
+      header: 
+        one: "%{count} error detected:"
+        other: "%{count} errors detected:"
+  tests:
+    index:
+      header: "Available tests"
+      title: "Title"
+      level: "Level"
+      category: "Category"
+      author: "Author"
+      questions_num: "Number of questions"
+      actions: "Actions"
+    test:
+      no_author: "No author"
+      start: "Pass the test"
+  test_passages:
+    result:
+      unsuccess_header: "The %{title} test wasn't passed! :( Your result is:"
+      success_header: "The %{title} test was successfully passed! Congratulations! Your result is:"
+      back: "Back to tests page"
+    show:
+      passing: "Passing the %{test} test"
+      questions_num: "Total number of questions: %{size}"
+      current_question_num: "The number of the current question: %{num}"
+      next: "Next"
+  tests_mailer:
+    completed_test:
+      subject: "You just completed the TestGuru test!"
+  activerecord:
+    models:
+      test: "Test"
+    attributes: 
+      test:
+        title: "Title"
+        level: "Level"
+        category: "Category"
+  sessions:
+    sign_in_message: "Welcome, %{first_name} %{last_name}. Glad to see you!"
