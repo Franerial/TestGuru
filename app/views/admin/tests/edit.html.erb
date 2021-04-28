@@ -4,6 +4,8 @@
       <h1> <%= t('.edit', test: @test.title) %> </h1>
     </center>
     <%= render "form" %>
-    <%= link_to t('.back'), admin_tests_path %>
+    <br>
+    <%= link_to t('.back'), admin_tests_path, class: 'btn btn-primary' %>
   </div>
 </div>
+<br>

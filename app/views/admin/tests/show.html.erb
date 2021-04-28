@@ -28,6 +28,18 @@
     <p> No questions for this test yet </p>
   <% end %>
 </table>
-<%= link_to t('.create_new_question'), new_admin_test_question_path(@test) %><br>
-<%= link_to t('.edit'), edit_admin_test_path(@test) %><br>
-<%= link_to t('.back'), admin_tests_path %>
+
+<br>
+<table class="table table-borderless" >
+  <tr>
+    <td> <%= link_to t('.create_new_question'), new_admin_test_question_path(@test), class: 'btn btn-primary' %> </td>
+  </tr>
+  <tr>
+    <td> <%= link_to t('.edit'), edit_admin_test_path(@test), class: 'btn btn-primary' %> </td>
+  </tr>
+  <tr>
+    <td> <%= link_to t('.back'), admin_tests_path, class: 'btn btn-primary' %> </td>
+  </tr>
+</table>
+
+
