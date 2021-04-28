@@ -62,13 +62,16 @@ ru:
       guru: "Гуру"
   shared:
     footer:
-      year: "Текущий год"
-      author: "Автор: Рябов Максим"
+      author: "Рябов Максим"
       project: "Учебный проект в рамках обучения Rails в онлайн школе Thinknetica"
+      author_header: "Автор"
+      links: "Ссылки"
     navbar:
       logout: "Выход"
       welcome: "Добро пожаловать"
       guru: "Гуру"
+      login: "Вход"
+      signup: "Регистрация"
     errors:
       header:
         few: "Обнаружено %{count} ошибки:"

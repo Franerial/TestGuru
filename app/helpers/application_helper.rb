@@ -1,4 +1,6 @@
 module ApplicationHelper
+  ALERTS = { alert: "danger", notice: "primary" }.freeze
+
   def current_year
     Time.current.year
   end
@@ -9,5 +11,9 @@ module ApplicationHelper
 
   def show_flash_message(message)
     tag.p(flash[message], class: "flash #{message}") if flash[message]
+  end
+
+  def alert_type(key)
+    ALERTS[key.to_sym]
   end
 end
