@@ -11,10 +11,13 @@
   </head>
 
   <body>
-    <%= render 'admin/nav' %>
-    <%= render 'shared/flash' %>
-    
-    <%= yield %>
+  <div id="wrap">
+      <%= render 'admin/nav' %>
+      <div id="main" class="container">
+        <%= render 'shared/flash' %>
+        <%= yield %>
+      </div>
+    </div>
     <%= render "shared/footer" %>
   </body>
 </html>

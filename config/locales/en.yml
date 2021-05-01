@@ -92,13 +92,16 @@ en:
       guru: "Guru"
   shared:
     footer:
-      year: "Current year"
-      author: "Author: Maxim Ryabov"
-      project: "This is an educational project in online school Thinknetica "
+      author: "Maxim Ryabov"
+      project: "This is an educational project in online school Thinknetica"
+      author_header: "Author"
+      links: "Links"
     navbar:
       welcome: "Welcome"
       logout: "Logout"
       guru: "Guru"
+      login: "Log in"
+      signup: "Sign up"
     errors:
       header: 
         one: "%{count} error detected:"

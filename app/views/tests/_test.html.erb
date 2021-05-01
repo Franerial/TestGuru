@@ -8,5 +8,5 @@
     <td> <%= t('.no_author') %> </td>
   <% end %>
   <td> <%= test.questions.size %> </td>
-  <td> <%= button_to t('.start'), start_test_path(test)%> </td>
+  <td> <%= button_to t('.start'), start_test_path(test), class: "btn btn-success" %> </td>
 </tr>
