@@ -128,6 +128,11 @@ en:
       questions_num: "Total number of questions: %{size}"
       current_question_num: "The number of the current question: %{num}"
       next: "Next"
+      gist: "Create gist for this question"
+    gist:
+      success: "Gist was successfully created!"
+      find_here: "Find it here"
+      unsuccess: "Failure! Unable to create gist!"
   tests_mailer:
     completed_test:
       subject: "You just completed the TestGuru test!"
@@ -141,3 +146,5 @@ en:
         category: "Category"
   sessions:
     sign_in_message: "Welcome, %{first_name} %{last_name}. Glad to see you!"
+  gist_question_service:
+    description: "The question from %{test} test from TestGuru application"

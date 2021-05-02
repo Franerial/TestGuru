@@ -100,6 +100,11 @@ ru:
       questions_num: "Общее число вопросов: %{size}"
       current_question_num: "Номер текущего вопроса: %{num}"
       next: "Далее"
+      gist: "Создать gist для текущего вопроса"
+    gist:
+      success: "Gist был успешно создан!"
+      find_here: "Найти тут"
+      unsuccess: "Ошибка. Gist не был создан!"
   tests_mailer:
     completed_test:
       subject: "Вы успешно завершили тест на TestGuru!"
@@ -113,3 +118,5 @@ ru:
         category: "Категория"
   sessions:
     sign_in_message: "Добро пожаловать, %{first_name} %{last_name}. Рады Вас видеть!"
+  gist_question_service:
+    description: "Вопрос из теста %{test} в приложении TestGuru"
