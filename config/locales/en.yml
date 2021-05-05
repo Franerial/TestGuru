@@ -57,6 +57,7 @@ en:
         questions_num: "Number of questions"
         actions: "Actions"
         create_new_test: "Create new test"
+        gists: "Gists list"
       test:
         show: "Show"
         edit: "Edit"
@@ -90,6 +91,16 @@ en:
       logout: "Logout"
       welcome: "Welcome"
       guru: "Guru"
+    gists:
+      index:
+        body: "Question body (first 25 characters)"
+        link: "Link (hashed)"
+        email: "User email"
+        delete: "Delete record"
+        header: "List of all created gists"
+        back: "Back to tests page"
+      gist:
+        delete_btn: "Delete"
   shared:
     footer:
       author: "Maxim Ryabov"

@@ -23,6 +23,7 @@ class TestPassagesController < ApplicationController
 
     if service.client.last_response
       flash[:notice] = "#{t(".success")} #{view_context.link_to(t(".find_here"), service.client.last_response.data[:html_url], target: "_blank")}".html_safe
+      @test_passage.user.gists.create(question_id: "#{@test_passage.current_question.id}", url: "#{service.client.last_response.data[:html_url]}")
     else
       flash[:notice] = t(".unsuccess")
     end

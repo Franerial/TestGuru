@@ -1,0 +1,14 @@
+<div class="row justify-content-center ">
+  <h1> <%= t('.header') %> </h1>
+  <table class="table table-bordered">
+    <tr class="thead-dark">
+      <th> <%= t('.body') %> </th>
+      <th> <%= t('.email') %> </th>
+      <th> <%= t('.link') %> </th>
+      <th> <%= t('.delete') %> </th>
+    </tr>
+    <%= render @gists %>
+  </table>
+  <%= link_to t('.back'), admin_tests_path, class: 'btn btn-primary' %>
+</div>
+<br>

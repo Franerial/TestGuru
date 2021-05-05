@@ -27,6 +27,7 @@ ru:
         actions: "Действия"
         create_new_test: "Создать новый тест"
         admin_panel: "TestGuru Admin Panel"
+        gists: "Список gists"
       test:
         show: "Открыть"
         edit: "Редактировать"
@@ -60,6 +61,16 @@ ru:
       logout: "Выход"
       welcome: "Добро пожаловать"
       guru: "Гуру"
+    gists:
+      index:
+        body: "Тело вопроса (первые 25 символов)"
+        link: "Ссылка (хэш)"
+        email: "Email пользователя"
+        delete: "Удалить запись"
+        header: "Список всех созданных gists"
+        back: "Назад на страницу с тестами"
+      gist:
+        delete_btn: "Удалить"
   shared:
     footer:
       author: "Рябов Максим"
