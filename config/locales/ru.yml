@@ -71,6 +71,10 @@ ru:
         back: "Назад на страницу с тестами"
       gist:
         delete_btn: "Удалить"
+      create:
+        success: "Gist был успешно создан!"
+        find_here: "Найти тут"
+        unsuccess: "Ошибка. Gist не был создан!"
   shared:
     footer:
       author: "Рябов Максим"
@@ -112,10 +116,6 @@ ru:
       current_question_num: "Номер текущего вопроса: %{num}"
       next: "Далее"
       gist: "Создать gist для текущего вопроса"
-    gist:
-      success: "Gist был успешно создан!"
-      find_here: "Найти тут"
-      unsuccess: "Ошибка. Gist не был создан!"
   tests_mailer:
     completed_test:
       subject: "Вы успешно завершили тест на TestGuru!"
