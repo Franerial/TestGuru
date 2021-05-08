@@ -1,6 +1,12 @@
 class GistQuestionService
   attr_reader :client
 
+  Result = Struct.new(:id, :url, :status_code) do
+    def success?
+      status_code.between?(200, 299)
+    end
+  end
+
   def initialize(question, client: nil)
     @question = question
     @test = @question.test
@@ -9,11 +15,7 @@ class GistQuestionService
 
   def call
     @client.create_gist(gist_params)
-    result = OpenStruct.new
-    result.id = @client.last_response.data[:id]
-    result.url = @client.last_response.data[:html_url]
-    result.success = @client.last_response.data[:id].present?
-    result
+    Result.new(@client.last_response.data[:id], @client.last_response.data[:html_url], @client.last_response.status)
   end
 
   private

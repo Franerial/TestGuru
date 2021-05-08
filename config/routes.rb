@@ -20,8 +20,10 @@ Rails.application.routes.draw do
         resources :answers, shallow: true, except: :index
       end
     end
-    resources :gists, only: %i[index destroy create]
+    resources :gists, only: %i[index destroy]
   end
+
+  resources :gists, only: :create
 
   root "tests#index"
 end

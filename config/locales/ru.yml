@@ -71,10 +71,6 @@ ru:
         back: "Назад на страницу с тестами"
       gist:
         delete_btn: "Удалить"
-      create:
-        success: "Gist был успешно создан!"
-        find_here: "Найти тут"
-        unsuccess: "Ошибка. Gist не был создан!"
   shared:
     footer:
       author: "Рябов Максим"
@@ -131,3 +127,8 @@ ru:
     sign_in_message: "Добро пожаловать, %{first_name} %{last_name}. Рады Вас видеть!"
   gist_question_service:
     description: "Вопрос из теста %{test} в приложении TestGuru"
+  gists:
+    create:
+      success: "Gist был успешно создан!"
+      find_here: "Найти тут"
+      unsuccess: "Ошибка. Gist не был создан!"

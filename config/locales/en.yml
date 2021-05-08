@@ -101,10 +101,6 @@ en:
         back: "Back to tests page"
       gist:
         delete_btn: "Delete"
-      create:
-        success: "Gist was successfully created!"
-        find_here: "Find it here"
-        unsuccess: "Failure! Unable to create gist!"
   shared:
     footer:
       author: "Maxim Ryabov"
@@ -159,3 +155,8 @@ en:
     sign_in_message: "Welcome, %{first_name} %{last_name}. Glad to see you!"
   gist_question_service:
     description: "The question from %{test} test from TestGuru application"
+  gists:
+    create:
+      success: "Gist was successfully created!"
+      find_here: "Find it here"
+      unsuccess: "Failure! Unable to create gist!"
