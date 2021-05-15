@@ -142,6 +142,12 @@ GEM
     nio4r (2.5.5)
     nokogiri (1.11.1-x86_64-linux)
       racc (~> 1.4)
+    octicons (14.1.0)
+      nokogiri (>= 1.6.3.1)
+    octicons_helper (14.1.0)
+      actionview
+      octicons (= 14.1.0)
+      railties
     octokit (4.21.0)
       faraday (>= 0.9)
       sawyer (~> 0.8.0, >= 0.5.3)
@@ -267,6 +273,7 @@ DEPENDENCIES
   jquery-rails (~> 4.4)
   letter_opener
   listen (~> 3.3)
+  octicons_helper (~> 14.1)
   octokit (~> 4.21)
   puma (~> 5.0)
   rack-mini-profiler (~> 2.0)
