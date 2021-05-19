@@ -3,7 +3,7 @@ class GistQuestionService
 
   Result = Struct.new(:id, :url, :status_code) do
     def success?
-      status_code.between?(200, 299)
+      status_code == 201
     end
   end
 

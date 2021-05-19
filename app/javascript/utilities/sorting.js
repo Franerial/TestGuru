@@ -1,7 +1,7 @@
 document.addEventListener('turbolinks:load', function () {
     var control = document.querySelector('.sort-by-title')
 
-    if (control) { control.addEventListener('click', sortRowsByTitle) }
+    if (control) control.addEventListener('click', sortRowsByTitle)
 })
 
 function sortRowsByTitle() {
@@ -19,11 +19,11 @@ function sortRowsByTitle() {
     var arrowUp = table.querySelector('.octicon-arrow-up')
 
     if (this.querySelector('.octicon-arrow-up').classList.contains('hide')) {
-        sortedRows.sort(compareRowsAsc)
+        sortedRows.sort((rowA, rowB) => rowA.cells[0].innerHTML > rowB.cells[0].innerHTML ? 1 : -1)
         this.querySelector('.octicon-arrow-up').classList.remove('hide')
         this.querySelector('.octicon-arrow-down').classList.add('hide')
     } else {
-        sortedRows.sort(compareRowsDesc)
+        sortedRows.sort((rowA, rowB) => rowA.cells[0].innerHTML > rowB.cells[0].innerHTML ? -1 : 1)
         this.querySelector('.octicon-arrow-down').classList.remove('hide')
         this.querySelector('.octicon-arrow-up').classList.add('hide')
     }
@@ -38,22 +38,4 @@ function sortRowsByTitle() {
     }
 
     table.parentNode.replaceChild(sortedTable, table)
-}
-
-function compareRowsAsc(row1, row2) {
-    var TestTitle1 = row1.querySelector('td').textContent
-    var TestTitle2 = row2.querySelector('td').textContent
-
-    if (TestTitle1 < TestTitle2) { return -1 }
-    if (TestTitle1 > TestTitle2) { return 1 }
-    return 0
-}
-
-function compareRowsDesc(row1, row2) {
-    var TestTitle1 = row1.querySelector('td').textContent
-    var TestTitle2 = row2.querySelector('td').textContent
-
-    if (TestTitle1 < TestTitle2) { return 1 }
-    if (TestTitle1 > TestTitle2) { return -1 }
-    return 0
 }

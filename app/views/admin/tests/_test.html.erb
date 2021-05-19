@@ -8,17 +8,17 @@
     <td> <%= t('.no_author')%> </td>
   <% end %>
   <td><%= test.questions.size %></td>
-  <td style="width:13.5%">
+  <td class="open_question_field">
     <%= link_to admin_test_path(test), :class => "btn btn-primary" do %>
       <i class="bi bi-eye"> <%= t('.show') %> </i>
     <% end %>
   </td>
-  <td style="width:18%">
+  <td class="edit_question_field">
     <%= link_to edit_admin_test_path(test), :class => "btn btn-success" do %>
       <i class="bi bi-pencil-square"> <%= t('.edit') %> </i>
     <% end %>
   </td>
-  <td style="width:13%">
+  <td class="delete_question_field">
     <%= link_to admin_test_path(test), method: :delete, data: { confirm: "Are you sure?" }, :class => "btn btn-danger" do %>
       <i class="bi bi-trash"> <%= t('.delete') %> </i>
     <% end %>
