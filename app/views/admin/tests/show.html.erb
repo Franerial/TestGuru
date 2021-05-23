@@ -19,7 +19,6 @@
   </tr>
 </table>
 <br>
-
 <h2> <%= t('.questions')%> </h2>
 <table class="table table-bordered">
   <% if @test.questions.present? %>
@@ -28,7 +27,6 @@
     <p> No questions for this test yet </p>
   <% end %>
 </table>
-
 <br>
 <table class="table table-borderless" >
   <tr>
@@ -41,5 +39,3 @@
     <td> <%= link_to t('.back'), admin_tests_path, class: 'btn btn-primary' %> </td>
   </tr>
 </table>
-
-

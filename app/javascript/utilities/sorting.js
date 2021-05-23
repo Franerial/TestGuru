@@ -7,4 +7,3 @@ document.addEventListener('turbolinks:load', function () {
 
   if (table_id != "" && column_name != "" && table != null) new SortedTable(table_id, column_name)
 })
-
