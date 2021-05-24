@@ -1,9 +1,17 @@
 <div class="row justify-content-center ">
   <h1> <%= t('.header') %> </h1>
-  <table class="table table-bordered">
+  <table class="table table-bordered" id="admin_test_table">
     <tr class="thead-dark">
-      <th> <%= t('.title') %> </th>
-      <th> <%= t('.level') %> </th>
+      <th class="sort-by-title pointer" style="width:13%">
+        <%= t('.title') %>
+        <%= octicon 'arrow-up', class: 'text-success hide'%>
+        <%= octicon 'arrow-down', class: 'text-success hide'%>
+      </th>
+      <th class="sort-by-level pointer" style="width:13%">
+        <%= t('.level') %>
+        <%= octicon 'arrow-up', class: 'text-success hide'%>
+        <%= octicon 'arrow-down', class: 'text-success hide'%>
+      </th>
       <th> <%= t('.category') %> </th>
       <th> <%= t('.author') %> </th>
       <th> <%= t('.questions_num') %> </th>
@@ -11,7 +19,6 @@
     </tr>
     <%= render @tests %>
   </table>
-  
   <table class="table table-borderless" >
     <tr>
       <td class="text-center"> <%= link_to t('.create_new_test'), new_admin_test_path, class: 'btn btn-primary' %> </td>
