@@ -32,7 +32,6 @@ ru:
         show: "Открыть"
         edit: "Редактировать"
         delete: "Удалить"
-        no_author: "Автор отсутствует"
       new:
         create_test: "Создать новый тест"
         back: "Назад на страницу с тестами"
@@ -44,13 +43,14 @@ ru:
         level: "Уровень теста:"
         category: "Категория теста:"
         author: "Автор теста:"
-        no_author: "Автор отсутствует"
         questions: "Список вопросов теста:"
         body: "Вопрос"
         actions: "Список действий"
         create_new_question: "Создать новый вопрос"
         edit: "Редактировать тест"
         back: "Назад на страницу с тестами"
+      form_inline:
+        submit: "Сохранить"
     questions:
       question:
         show: "Открыть"

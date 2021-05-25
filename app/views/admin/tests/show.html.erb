@@ -9,13 +9,7 @@
     <th> <%= @test.title %> </th>
     <th> <%= test_level(@test) %> </th>
     <th> <%= @test.category.title %> </th>
-    <th>
-      <% if @test.author.present? %>
-        <p><%= @test.author.email %></p>
-      <% else %>
-        <p> <%= t('.no_author')%> </p>
-      <% end %>
-    </th>
+    <th> <%= @test.author.email %> </th>
   </tr>
 </table>
 <br>

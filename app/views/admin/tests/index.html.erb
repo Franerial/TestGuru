@@ -1,21 +1,24 @@
-<div class="row justify-content-center ">
-  <h1> <%= t('.header') %> </h1>
-  <table class="table table-bordered" id="admin_test_table">
+<div class="row justify-content-center w-100">
+  <h1 class="col-12 text-center"> <%= t('.header') %> </h1>
+  <div class="text-left">
+    <%= render 'shared/errors', resource: @test %>
+  </div>
+  <table class="table table-sm table-bordered" id="admin_test_table">
     <tr class="thead-dark">
-      <th class="sort-by-title pointer" style="width:13%">
+      <th class="sort-by-title pointer align-middle text-center" style="width:13%">
         <%= t('.title') %>
         <%= octicon 'arrow-up', class: 'text-success hide'%>
         <%= octicon 'arrow-down', class: 'text-success hide'%>
       </th>
-      <th class="sort-by-level pointer" style="width:13%">
+      <th class="sort-by-level pointer align-middle text-center" style="width:13%">
         <%= t('.level') %>
         <%= octicon 'arrow-up', class: 'text-success hide'%>
         <%= octicon 'arrow-down', class: 'text-success hide'%>
       </th>
-      <th> <%= t('.category') %> </th>
-      <th> <%= t('.author') %> </th>
-      <th> <%= t('.questions_num') %> </th>
-      <th colspan="3"> <%= t('.actions') %> </th>
+      <th class="align-middle text-center"> <%= t('.category') %> </th>
+      <th class="align-middle text-center"> <%= t('.author') %> </th>
+      <th class="align-middle text-center"> <%= t('.questions_num') %> </th>
+      <th colspan="3" class="align-middle text-center"> <%= t('.actions') %> </th>
     </tr>
     <%= render @tests %>
   </table>

@@ -60,9 +60,8 @@ en:
         gists: "Gists list"
       test:
         show: "Show"
-        edit: "Edit"
+        edit: "Edit title"
         delete: "Delete"
-        no_author: "No author"
       new:
         create_test: "Create new test"
         back: "Back to tests page"
@@ -74,13 +73,14 @@ en:
         level: "Test Level:"
         category: "Test Category:"
         author: "Test Author:"
-        no_author: "No author"
         questions: "Test questions list:"
         body: "Body"
         actions: "Actions"
         create_new_question: "Create new question"
         edit: "Edit test"
         back: "Back to tests page"
+      form_inline:
+        submit: "Save"
     questions:
       question:
         show: "Show"
