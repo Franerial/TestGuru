@@ -1,5 +1,5 @@
 export class ProgressBar {
-  constructor(progressBarId, event) {
+  constructor(progressBarId) {
     this.progressBar = document.getElementById(progressBarId)
     this.progressBarValue = document.querySelector('.progress-bar-value')
     this.currentQuestionNum = this.progressBarValue.dataset.currentQuestionNum
