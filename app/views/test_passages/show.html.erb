@@ -1,4 +1,14 @@
-<h1> <%= t('.passing', test: @test_passage.test.title) %> </h1>
+<center>
+  <h1> <%= t('.passing', test: @test_passage.test.title) %> </h1>
+  <br>
+  <div id="progress_bar">
+    <div class="progress">
+      <div class="progress-bar bg-info" role="progressbar"></div>
+    </div>
+    <%= content_tag :p, "0 %", class: "progress-bar-value", data: { current_question_num: @test_passage.current_question_number, questions_num: @test_passage.test.questions.size} %>
+  </div>
+</center>
+<br>
 <h2> <%= t('.questions_num', size: @test_passage.test.questions.size) %> </h2>
 <h2> <%= t('.current_question_num', num: @test_passage.current_question_number) %> </h2>
 <b>

@@ -3,20 +3,20 @@
   <br>
   <table class="table table-bordered" id="test_table">
     <tr class="thead-dark">
-      <th class="sort-by-title pointer">
+      <th class="sort-by-title pointer align-middle text-center">
         <%= t('.title') %>
         <%= octicon 'arrow-up', class: 'text-success hide'%>
         <%= octicon 'arrow-down', class: 'text-success hide'%>
       </th>
-      <th class="sort-by-level pointer">
+      <th class="sort-by-level pointer align-middle text-center">
         <%= t('.level') %>
         <%= octicon 'arrow-up', class: 'text-success hide'%>
         <%= octicon 'arrow-down', class: 'text-success hide'%>
       </th>
-      <th> <%= t('.category') %> </th>
-      <th> <%= t('.author') %> </th>
-      <th> <%= t('.questions_num') %> </th>
-      <th> <%= t('.actions') %> </th>
+      <th class="align-middle text-center"> <%= t('.category') %> </th>
+      <th class="align-middle text-center"> <%= t('.author') %> </th>
+      <th class="align-middle text-center"> <%= t('.questions_num') %> </th>
+      <th class="align-middle text-center"> <%= t('.actions') %> </th>
     </tr>
     <%= render @tests %>
   </table>
