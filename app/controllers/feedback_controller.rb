@@ -5,7 +5,7 @@ class FeedbackController < ApplicationController
 
   def create
     FeedbackMailer.create(params[:message]).deliver_now
-    flash[:notice] = t(".success")
+    flash.now[:notice] = t(".success")
     render :index
   end
 end
