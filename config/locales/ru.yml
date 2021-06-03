@@ -124,6 +124,11 @@ ru:
         title: "Название"
         level: "Уровень"
         category: "Категория"
+      user:
+        first_name: "Имя"
+        last_name: "Фамилия"
+        password: "Пароль"
+        password_confirmation: "Подтверждение пароля"
   sessions:
     sign_in_message: "Добро пожаловать, %{first_name} %{last_name}. Рады Вас видеть!"
   gist_question_service:

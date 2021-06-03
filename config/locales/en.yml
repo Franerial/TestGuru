@@ -152,6 +152,11 @@ en:
         title: "Title"
         level: "Level"
         category: "Category"
+      user:
+        first_name: "First Name"
+        last_name: "Last Name"
+        password: "Password"
+        password_confirmation: "Password confirmation"
   sessions:
     sign_in_message: "Welcome, %{first_name} %{last_name}. Glad to see you!"
   gist_question_service:
