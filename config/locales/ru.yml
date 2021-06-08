@@ -77,6 +77,7 @@ ru:
       project: "Учебный проект в рамках обучения Rails в онлайн школе Thinknetica"
       author_header: "Автор"
       links: "Ссылки"
+      contact: "Напишите нам"
     navbar:
       logout: "Выход"
       welcome: "Добро пожаловать"
@@ -123,6 +124,11 @@ ru:
         title: "Название"
         level: "Уровень"
         category: "Категория"
+      user:
+        first_name: "Имя"
+        last_name: "Фамилия"
+        password: "Пароль"
+        password_confirmation: "Подтверждение пароля"
   sessions:
     sign_in_message: "Добро пожаловать, %{first_name} %{last_name}. Рады Вас видеть!"
   gist_question_service:
@@ -132,3 +138,11 @@ ru:
       success: "Gist был успешно создан!"
       find_here: "Найти тут"
       unsuccess: "Ошибка. Gist не был создан!"
+  feedback:
+    index:
+      contact: "Напишите нам"
+      send: "Отправить"
+      back: "Назад на страницу с тестами"
+      message: "Введите сообщение"
+    create:
+      success: "Сообщение успешно отправлено"

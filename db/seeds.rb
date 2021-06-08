@@ -13,17 +13,17 @@ categories = Category.create!([
 ])
 
 users = User.create!([
-  { name: "Maxim", email: "brugunt@gmail.com", password: "f75hd5" },
-  { name: "Polina", email: "poly_raven@gmail.com", password: "dfd456sd" },
-  { name: "Dmitry", email: "dmitry@tut.by", password: "0sdret54" },
+  { first_name: "Maxim", email: "max98100@tut.by", password: "123456789" },
+  { first_name: "Polina", email: "poly_raven@gmail.com", password: "123456789" },
+  { first_name: "Dmitry", email: "dmitry@tut.by", password: "2123456789" },
 ])
 
 tests = Test.create!([
-  { title: "HTML", category_id: categories[0].id },
-  { title: "JavaScript", level: 1, category_id: categories[0].id },
-  { title: "Ruby", level: 2, category_id: categories[1].id },
-  { title: "Java", level: 3, category_id: categories[1].id },
-  { title: "Python", level: 2, category_id: categories[2].id },
+  { title: "HTML", category_id: categories[0].id, author_id: users[0].id },
+  { title: "JavaScript", level: 1, category_id: categories[0].id, author_id: users[2].id },
+  { title: "Ruby", level: 2, category_id: categories[1].id, author_id: users[1].id },
+  { title: "Java", level: 3, category_id: categories[1].id, author_id: users[2].id },
+  { title: "Python", level: 2, category_id: categories[2].id, author_id: users[1].id },
 ])
 
 questions = Question.create!([
@@ -64,13 +64,4 @@ Answer.create!([
   { body: "Any number of arguments", correct: true, question_id: questions[6].id },
   { body: "Only one argument", question_id: questions[6].id },
   { body: "No arguments", question_id: questions[6].id },
-])
-
-PassingTest.create!([
-  { user_id: users[0].id, test_id: tests[0].id },
-  { user_id: users[0].id, test_id: tests[2].id },
-  { user_id: users[1].id, test_id: tests[4].id, passed: true },
-  { user_id: users[2].id, test_id: tests[0].id },
-  { user_id: users[2].id, test_id: tests[1].id },
-  { user_id: users[2].id, test_id: tests[3].id, passed: true },
 ])

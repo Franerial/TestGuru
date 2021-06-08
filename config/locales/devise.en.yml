@@ -6,6 +6,9 @@ en:
       confirmed: "Your email address has been successfully confirmed."
       send_instructions: "You will receive an email with instructions for how to confirm your email address in a few minutes."
       send_paranoid_instructions: "If your email address exists in our database, you will receive an email with instructions for how to confirm your email address in a few minutes."
+      new:
+        header: "Resend confirmation instructions"
+        send: "Send instructions"
     failure:
       already_authenticated: "You are already signed in."
       inactive: "Your account is not activated yet."
@@ -36,6 +39,9 @@ en:
       send_paranoid_instructions: "If your email address exists in our database, you will receive a password recovery link at your email address in a few minutes."
       updated: "Your password has been changed successfully. You are now signed in."
       updated_not_active: "Your password has been changed successfully."
+      new:
+        header: "Reset password"
+        send: "Send me reset password instructions"
     registrations:
       destroyed: "Bye! Your account has been successfully cancelled. We hope to see you again soon."
       signed_up: "Welcome! You have signed up successfully."
@@ -45,10 +51,25 @@ en:
       update_needs_confirmation: "You updated your account successfully, but we need to verify your new email address. Please check your email and follow the confirmation link to confirm your new email address."
       updated: "Your account has been updated successfully."
       updated_but_not_signed_in: "Your account has been updated successfully, but since your password was changed, you need to sign in again"
+      new:
+        sign_up: "Sign up"
+        minimum_password_length: "minimum %{count} characters"
+        first_name_enter: "Enter First Name"
+        last_name_enter: "Enter Last Name"
+        email_enter: "Enter Email"
+        header: "Become a Guru"
     sessions:
       signed_in: "Signed in successfully."
       signed_out: "Signed out successfully."
       already_signed_out: "Signed out successfully."
+      new:
+        enter: "Enter"
+        header: "Enter the Guru Gates"
+        remember_me: "Remember me"
+    shared:
+      links:
+        forgot_password: "Forgot your password?"
+        instructions: "Didn't receive confirmation instructions?"
     unlocks:
       send_instructions: "You will receive an email with instructions for how to unlock your account in a few minutes."
       send_paranoid_instructions: "If your account exists, you will receive an email with instructions for how to unlock it in a few minutes."
@@ -70,6 +91,9 @@ ru:
       confirmed: "Ваша учётная запись успешно подтверждена."
       send_instructions: "В течение нескольких минут вы получите письмо с инструкциями по подтверждению вашей учётной записи."
       send_paranoid_instructions: "Если ваш адрес email есть в нашей базе данных, то в течение нескольких минут вы получите письмо с инструкциями по подтверждению вашей учётной записи."
+      new:
+        header: "Повторная отправка инструкций по подтверждению"
+        send: "Отправить инструкции"
     failure:
       already_authenticated: "Вы уже вошли в систему."
       inactive: "Ваша учётная запись ещё не активирована."
@@ -100,6 +124,9 @@ ru:
       send_paranoid_instructions: "Если ваш адрес email есть в нашей базе данных, то в течение нескольких минут Вы получите письмо с инструкциями по восстановлению вашего пароля."
       updated: "Ваш пароль успешно изменён. Теперь вы вошли в систему."
       updated_not_active: "Пароль успешно изменён."
+      new:
+        header: "Восстановление пароля"
+        send: "Отправить инструкции"
     registrations:
       destroyed: "До свидания! Ваша учётная запись успешно удалена. Надеемся снова увидеть вас."
       signed_up: "Добро пожаловать! Вы успешно зарегистрировались."
@@ -109,10 +136,25 @@ ru:
       update_needs_confirmation: "Ваш аккаунт успешно обновлен, нонеобходимо подтвердить Ваш новый адрес email. Пожалуйста, проверьте свою электронную почту и нажмите на ссылку \"Подтвердить\", чтобы завершить обновления email."
       updated: "Ваша учётная запись успешно изменена."
       updated_but_not_signed_in: "Ваш аккаунт успешно изменен, но так как ваш пароль изменился, нужно войти снова."
+      new:
+        sign_up: "Регистрация"
+        minimum_password_length: "минимум %{count} символов"
+        first_name_enter: "Введите имя"
+        last_name_enter: "Введите фамилию"
+        email_enter: "Введите Email"
+        header: "Создать аккаунт"
     sessions:
       signed_in: "Вход в систему выполнен"
       signed_out: "Выход из системы выполнен."
       already_signed_out: "Выход из системы выполнен."
+      new:
+        enter: "Вход"
+        header: "Вход в систему"
+        remember_me: "Запомнить меня"
+    shared:
+      links:
+        forgot_password: "Забыли пароль?"
+        instructions: "Не получили инструкции по подтверждению?"
     unlocks:
       send_instructions: "В течение нескольких минут вы получите письмо с инструкциями по разблокировке вашей учётной записи."
       send_paranoid_instructions: "Если ваша учётная запись существует, то в течение нескольких минут вы получите письмо с инструкциями по её разблокировке."

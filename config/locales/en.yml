@@ -107,6 +107,7 @@ en:
       project: "This is an educational project in online school Thinknetica"
       author_header: "Author"
       links: "Links"
+      contact: "Contact us"
     navbar:
       welcome: "Welcome"
       logout: "Logout"
@@ -151,6 +152,11 @@ en:
         title: "Title"
         level: "Level"
         category: "Category"
+      user:
+        first_name: "First Name"
+        last_name: "Last Name"
+        password: "Password"
+        password_confirmation: "Password confirmation"
   sessions:
     sign_in_message: "Welcome, %{first_name} %{last_name}. Glad to see you!"
   gist_question_service:
@@ -160,3 +166,11 @@ en:
       success: "Gist was successfully created!"
       find_here: "Find it here"
       unsuccess: "Failure! Unable to create gist!"
+  feedback:
+    index:
+      contact: "Contact us"
+      send: "Send"
+      back: "Back to tests page"
+      message: "Enter the message"
+    create:
+      success: "The message was sent successfully"

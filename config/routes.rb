@@ -26,5 +26,7 @@ Rails.application.routes.draw do
 
   resources :gists, only: :create
 
+  resources :feedback, only: %i[index create]
+
   root "tests#index"
 end
