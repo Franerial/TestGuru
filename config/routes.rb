@@ -22,11 +22,14 @@ Rails.application.routes.draw do
       end
     end
     resources :gists, only: %i[index destroy]
+    resources :badges
   end
 
   resources :gists, only: :create
 
   resources :feedback, only: %i[index create]
+
+  resources :badges, only: :index
 
   root "tests#index"
 end

@@ -35,11 +35,17 @@ en:
       test:
         create: "Create Test"
         update: "Update Test"
+      badge:
+        create: "Create badge"
     label:
       test:
         title: "Title"
         level: "Level"
         category_id: "Category"
+      badge:
+        name: "Badge name"
+        image_url: "Image URL"
+        rule_id: "Rule to achieve"
     select:
       prompt: "Please select"
     application_helper:
@@ -58,6 +64,7 @@ en:
         actions: "Actions"
         create_new_test: "Create new test"
         gists: "Gists list"
+        badges: "Available badges list"
       test:
         show: "Show"
         edit: "Edit title"
@@ -101,6 +108,26 @@ en:
         back: "Back to tests page"
       gist:
         delete_btn: "Delete"
+    badges:
+      index:
+        header: "Available badges list"
+        badge_name: "Badge name"
+        badge_image: "Badge image"
+        badge_rule: "Badge rule description"
+        actions: "Actions"
+        new_badge: "Create new badge"
+        back: "Back to tests page"
+      badge:
+        edit: "Edit"
+        delete: "Delete"
+      new:
+        header: "Create new badge"
+        back: "Back to badges list"
+      create:
+        success: "The badge was successfully created"
+      edit:
+        edit: "Editing badge %{badge}"
+        back: "Back to badges list"
   shared:
     footer:
       author: "Maxim Ryabov"
@@ -157,6 +184,10 @@ en:
         last_name: "Last Name"
         password: "Password"
         password_confirmation: "Password confirmation"
+      badge:
+        name: "Name"
+        image_url: "Image url"
+        rule: "Rule to achieve"
   sessions:
     sign_in_message: "Welcome, %{first_name} %{last_name}. Glad to see you!"
   gist_question_service:

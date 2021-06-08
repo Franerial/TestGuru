@@ -13,6 +13,8 @@ class User < ApplicationRecord
   has_many :tests, through: :test_passages
   has_many :authored_tests, foreign_key: "author_id", class_name: "Test", dependent: :destroy
   has_many :gists, dependent: :destroy
+  has_many :user_badges, dependent: :destroy
+  has_many :badges, through: :user_badges
 
   def tests_by_level(level)
     Test.joins(:passing_tests).where({ passing_tests: { user_id: id }, level: level })
