@@ -11,18 +11,19 @@ class GiveBadgeService
     received_badges = []
 
     Badge.all.each do |badge|
-      received_badges << badge if send("#{badge.rule_type}?")
+      received_badges << badge if send("#{badge.rule.rule_type}?")
     end
     user.badges.push(received_badges)
+    received_badges.empty?
   end
 
   private
 
   def pass_test_by_category?(category_title)
     selected_category_tests = Test.tests_by_category(category_title)
-    user_successfully_passed_tests_by_category = user_successfully_passed_tests.uniq.select { |test| test.category.title == category_title }
+    user_successfully_passed_tests_by_category = user_successfully_passed_tests.select { |test| test.category.title == category_title }
 
-    selected_category_tests.sort == user_successfully_passed_tests_by_category.sort
+    (selected_category_tests.sort == user_successfully_passed_tests_by_category.sort) && (passing_test.test.category.title == category_title)
   end
 
   def pass_all_frontend_tests?
@@ -45,20 +46,32 @@ class GiveBadgeService
   end
 
   def pass_all_easy_level_tests?
-    user_successfully_passed_tests_by_level = user_successfully_passed_tests.uniq.select { |test| test.level.between?(0..1) }
+    user_successfully_passed_tests_by_level = user_successfully_passed_tests.select { |test| test.level == 0 }
 
-    Test.easy_level.sort == user_successfully_passed_tests_by_level.sort
+    (Test.easy_level.sort == user_successfully_passed_tests_by_level.sort) && (passing_test.test.level == 0)
   end
 
-  def pass_all_mid_level_tests?
-    user_successfully_passed_tests_by_level = user_successfully_passed_tests.uniq.select { |test| test.level.between?(2..4) }
+  def pass_all_elementary_level_tests?
+    user_successfully_passed_tests_by_level = user_successfully_passed_tests.select { |test| test.level == 1 }
 
-    Test.mid_level.sort == user_successfully_passed_tests_by_level.sort
+    (Test.elementary_level.sort == user_successfully_passed_tests_by_level.sort) && (passing_test.test.level == 1)
+  end
+
+  def pass_all_advanced_level_tests?
+    user_successfully_passed_tests_by_level = user_successfully_passed_tests.select { |test| test.level == 2 }
+
+    (Test.advanced_level.sort == user_successfully_passed_tests_by_level.sort) && (passing_test.test.level == 2)
   end
 
   def pass_all_hard_level_tests?
-    user_successfully_passed_tests_by_level = user_successfully_passed_tests.uniq.select { |test| test.level.between?(5..Float::INFINITY) }
+    user_successfully_passed_tests_by_level = user_successfully_passed_tests.select { |test| test.level == 3 }
 
-    Test.hard_level.sort == user_successfully_passed_tests_by_level.sort
+    (Test.hard_level.sort == user_successfully_passed_tests_by_level.sort) && (passing_test.test.level == 3)
+  end
+
+  def pass_all_hero_level_tests?
+    user_successfully_passed_tests_by_level = user_successfully_passed_tests.select { |test| test.level.between?(4, Float::INFINITY) }
+
+    (Test.hero_level.sort == user_successfully_passed_tests_by_level.sort) && (passing_test.test.level.between?(4, Float::INFINITY))
   end
 end

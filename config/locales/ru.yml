@@ -126,6 +126,7 @@ ru:
       author: "Автор"
       questions_num: "Количество вопросов"
       actions: "Действия"
+      badges: "Список заработанных наград"
     test:
       no_author: "Автор отсутствует"
       start: "Пройти тест"
@@ -134,12 +135,20 @@ ru:
       unsuccess_header: "Тест %{title} не был успешно завершён! :( Ваш результат:"
       success_header: "Тест %{title} был успешно завершён! Поздравляем! Ваш результат:"
       back: "Назад на страницу с тестами"
+      success: "Поздравляем, вы заработали награду!"
     show:
       passing: "Прохождение %{test} теста"
       questions_num: "Общее число вопросов: %{size}"
       current_question_num: "Номер текущего вопроса: %{num}"
       next: "Далее"
       gist: "Создать gist для текущего вопроса"
+  badges:
+    index:
+      header: "Список доступных наград"
+      badge_name: "Имя награды"
+      badge_image: "Изображение награды"
+      badge_rule: "Описание правила награды"
+      back: "Назад на страницу с тестами"
   tests_mailer:
     completed_test:
       subject: "Вы успешно завершили тест на TestGuru!"

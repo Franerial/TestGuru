@@ -4,7 +4,11 @@ class TestPassagesController < ApplicationController
 
   def show; end
 
-  def result; end
+  def result
+    result = GiveBadgeService.new(current_user, @test_passage).call
+
+    flash.now[:notice] = t(".success") unless result
+  end
 
   def update
     @test_passage.accept!(params[:answer_ids])
