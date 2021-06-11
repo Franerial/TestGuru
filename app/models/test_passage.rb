@@ -24,6 +24,7 @@ class TestPassage < ApplicationRecord
     if correct_answer?(answer_ids)
       self.correct_questions += 1
     end
+    mark_as_successfully_passed if self.successfully_passed?
     save!
   end
 
@@ -33,6 +34,10 @@ class TestPassage < ApplicationRecord
 
   def next_questions
     test.questions.order(:id).where("id > ?", current_question.id)
+  end
+
+  def mark_as_successfully_passed
+    self.sucessfully_passed = true
   end
 
   private

@@ -163,13 +163,14 @@ en:
       unsuccess_header: "The %{title} test wasn't passed! :( Your result is:"
       success_header: "The %{title} test was successfully passed! Congratulations! Your result is:"
       back: "Back to tests page"
-      success: "Congratulations, you've just earned a badge!"
     show:
       passing: "Passing the %{test} test"
       questions_num: "Total number of questions: %{size}"
       current_question_num: "The number of the current question: %{num}"
       next: "Next"
       gist: "Create gist for this question"
+    update:
+      success: "Congratulations, you've just earned a badge!"
   badges:
     index:
       header: "Available badges list"
