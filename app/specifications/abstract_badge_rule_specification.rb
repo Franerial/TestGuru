@@ -11,6 +11,6 @@ class AbstractBadgeRuleSpecification
   protected
 
   def user_contain_current_badge?
-    user.badges.pluck(:id).include?(current_badge.id)
+    user.badges.ids.include?(current_badge.id)
   end
 end

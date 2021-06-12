@@ -8,12 +8,12 @@
   <td class="align-middle text-center"> <%= test.author.email %> </td>
   <td class="align-middle text-center"> <%= test.questions.size %> </td>
   <td class="open_question_field align-middle text-center">
-    <%= link_to admin_test_path(test), :class => "btn btn-primary" do %>
+    <%= link_to admin_test_path(test), class: "btn btn-primary" do %>
       <i class="bi bi-eye"> <%= t('.show') %> </i>
     <% end %>
   </td>
   <td class="edit_question_field align-middle text-center">
-    <%= link_to edit_admin_test_path(test), :class => "btn btn-success form-inline-link", :data => { test_id: test.id} do %>
+    <%= link_to edit_admin_test_path(test), class: "btn btn-success form-inline-link", data: { test_id: test.id} do %>
       <i class="bi bi-pencil-square"> <%= t('.edit') %> </i>
     <% end %>
   </td>
