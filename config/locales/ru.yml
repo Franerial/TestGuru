@@ -4,11 +4,17 @@ ru:
       test:
         create: "Создать тест"
         update: "Редактировать тест"
+      badge:
+        create: "Создать награду"
     label:
       test:
         title: "Заголовок"
         level: "Уровень"
         category_id: "Категория"
+      badge:
+        name: "Имя награды"
+        image_url: "Адрес изображения (ссылка)"
+        rule_id: "Правило получения"
     select:
       prompt: "Выберите"
     application_helper:
@@ -28,6 +34,7 @@ ru:
         create_new_test: "Создать новый тест"
         admin_panel: "TestGuru Admin Panel"
         gists: "Список gists"
+        badges: "Список доступных наград"
       test:
         show: "Открыть"
         edit: "Редактировать"
@@ -71,6 +78,26 @@ ru:
         back: "Назад на страницу с тестами"
       gist:
         delete_btn: "Удалить"
+    badges:
+      index:
+        header: "Список доступных наград"
+        badge_name: "Имя награды"
+        badge_image: "Изображение награды"
+        badge_rule: "Описание правила награды"
+        actions: "Список действий"
+        new_badge: "Создать новую награду"
+        back: "Назад на страницу с тестами"
+      badge:
+        edit: "Редактировать"
+        delete: "Удалить"
+      new:
+        header: "Создать новую награду"
+        back: "Назад на страницу с наградами"
+      create:
+        success: "Награда была успешно создана"
+      edit:
+        edit: "Редактирование награды %{badge}"
+        back: "Назад на страницу с наградами"
   shared:
     footer:
       author: "Рябов Максим"
@@ -99,6 +126,7 @@ ru:
       author: "Автор"
       questions_num: "Количество вопросов"
       actions: "Действия"
+      badges: "Список заработанных наград"
     test:
       no_author: "Автор отсутствует"
       start: "Пройти тест"
@@ -113,6 +141,15 @@ ru:
       current_question_num: "Номер текущего вопроса: %{num}"
       next: "Далее"
       gist: "Создать gist для текущего вопроса"
+    update:
+      success: "Поздравляем, вы заработали награду!"
+  badges:
+    index:
+      header: "Список доступных наград"
+      badge_name: "Имя награды"
+      badge_image: "Изображение награды"
+      badge_rule: "Описание правила награды"
+      back: "Назад на страницу с тестами"
   tests_mailer:
     completed_test:
       subject: "Вы успешно завершили тест на TestGuru!"
@@ -129,6 +166,10 @@ ru:
         last_name: "Фамилия"
         password: "Пароль"
         password_confirmation: "Подтверждение пароля"
+      badge:
+        name: "Имя"
+        image_url: "Адрес изображения"
+        rule: "Правило получения"
   sessions:
     sign_in_message: "Добро пожаловать, %{first_name} %{last_name}. Рады Вас видеть!"
   gist_question_service:
