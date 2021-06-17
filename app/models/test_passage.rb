@@ -7,6 +7,7 @@ class TestPassage < ApplicationRecord
 
   before_validation :before_validation_set_first_question, on: :create
   before_update :before_update_set_next_question
+  before_validation :set_remaining_time, on: :create
 
   def completed?
     current_question.nil?
@@ -57,5 +58,9 @@ class TestPassage < ApplicationRecord
 
   def before_update_set_next_question
     self.current_question = test.questions.order(:id).where("id > ?", current_question.id).first
+  end
+
+  def set_remaining_time
+    self.remaining_time = test.http_end_time
   end
 end

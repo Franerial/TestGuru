@@ -7,6 +7,13 @@
   <td class="align-middle text-center"> <%= test.category.title %> </td>
   <td class="align-middle text-center"> <%= test.author.email %> </td>
   <td class="align-middle text-center"> <%= test.questions.size %> </td>
+  <td class="align-middle text-center">
+    <% if test.passing_time.present? %>
+      <%= test.passing_time %>
+    <% else %>
+      &#8734
+    <% end %>
+  </td>
   <td class="open_question_field align-middle text-center">
     <%= link_to admin_test_path(test), class: "btn btn-primary" do %>
       <i class="bi bi-eye"> <%= t('.show') %> </i>

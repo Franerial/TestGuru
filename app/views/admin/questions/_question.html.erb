@@ -1,16 +1,16 @@
 <tr>
   <td><%= question.body %></td>
-  <td>
+  <td class="open_question_field align-middle text-center">
     <%= link_to admin_question_path(question), class: "btn btn-primary" do %>
       <i class="bi bi-eye"> <%= t('.show') %> </i>
     <% end %>
   </td>
-  <td>
+  <td class="edit_question_field align-middle text-center">
     <%= link_to edit_admin_question_path(question), class: "btn btn-success" do %>
       <i class="bi bi-pencil-square"> <%= t('.edit') %> </i>
     <% end %>
   </td>
-  <td>
+  <td class="delete_question_field align-middle text-center">
     <%= link_to admin_question_path(question), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger" do %>
       <i class="bi bi-trash"> <%= t('.delete') %> </i>
     <% end %>

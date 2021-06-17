@@ -17,6 +17,11 @@
           <%= form.label :category_id %>
           <%= form.collection_select :category_id, Category.all, :id, :title, prompt: true %>
         </p>
+        <br>
+        <p>
+          <%= form.label :passing_time %> 
+          <%= form.number_field :passing_time, class: "form-control" %>
+        </p>
         <%= form.submit %>
       </div>
     <% end %>

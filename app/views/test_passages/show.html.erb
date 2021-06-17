@@ -7,6 +7,10 @@
     </div>
     <%= content_tag :p, "0 %", class: "progress-bar-value", data: { current_question_num: @test_passage.current_question_number, questions_num: @test_passage.test.questions.size} %>
   </div>
+  <br>
+  <div id="timer_bar">
+    <%= content_tag :p, "", class: "timer-bar-value hide", data: { end_time: @test_passage.remaining_time, test_passage_id: @test_passage.id} %>
+  </div>
 </center>
 <br>
 <h2> <%= t('.questions_num', size: @test_passage.test.questions.size) %> </h2>

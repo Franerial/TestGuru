@@ -4,5 +4,12 @@
   <td class="align-middle text-center"> <%= test.category.title %> </td>
   <td class="align-middle text-center"> <%= test.author.email %> </td>
   <td class="align-middle text-center"> <%= test.questions.size %> </td>
+  <td class="align-middle text-center">
+    <% if test.passing_time.present? %>
+      <%= test.passing_time %>
+    <% else %>
+      &#8734
+    <% end %>
+  </td>
   <td class="align-middle text-center"> <%= button_to t('.start'), start_test_path(test), class: "btn btn-success" %> </td>
 </tr>
