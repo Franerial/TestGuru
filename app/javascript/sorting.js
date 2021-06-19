@@ -1,4 +1,4 @@
-import { SortedTable } from './SortedTable.js'
+import { SortedTable } from './utilities/SortedTable.js'
 
 document.addEventListener('turbolinks:load', function () {
   const table_id = "test_table"

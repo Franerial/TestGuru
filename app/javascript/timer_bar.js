@@ -1,4 +1,4 @@
-import { TimerBar } from './TimerBar.js'
+import { TimerBar } from './utilities/TimerBar.js'
 
 document.addEventListener('turbolinks:load', function () {
   const timerBarId = 'timer_bar'

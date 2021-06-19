@@ -1,4 +1,4 @@
-import { ProgressBar } from './ProgressBar.js'
+import { ProgressBar } from './utilities/ProgressBar.js'
 
 document.addEventListener('turbolinks:load', function () {
   const progressBarId = 'progress_bar'
