@@ -4,7 +4,7 @@ export class TimerBar {
     this.timerBarValue = this.timerBar.querySelector('.timer-bar-value')
     this.testPassageId = this.timerBarValue.dataset.testPassageId
     this.endTime = this.timerBarValue.dataset.endTime
-
+    this.form = document.getElementById('choose_answers_form')
     this.сreateBar()
   }
 
@@ -32,11 +32,7 @@ export class TimerBar {
     if (distance < 0) {
       clearInterval(this.interval)
 
-      $.ajax({
-        method: "PUT",
-        url: this.testPassageId,
-        data: { time_end: true }
-      })
+      this.form.submit()
     }
   }
 }

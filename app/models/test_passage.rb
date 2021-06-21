@@ -41,8 +41,8 @@ class TestPassage < ApplicationRecord
     self.sucessfully_passed = true
   end
 
-  def check_lefted_time(time_end)
-    self.closed = true if time_end
+  def check_lefted_time
+    self.closed = true if Time.now >= self.remaining_time
   end
 
   private
