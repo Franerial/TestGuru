@@ -11,6 +11,7 @@ ru:
         title: "Заголовок"
         level: "Уровень"
         category_id: "Категория"
+        passing_time: "Время прохождения (мин)"
       badge:
         name: "Имя награды"
         image_url: "Адрес изображения (ссылка)"
@@ -35,9 +36,10 @@ ru:
         admin_panel: "TestGuru Admin Panel"
         gists: "Список gists"
         badges: "Список доступных наград"
+        passing_time: "Время (мин)"
       test:
         show: "Открыть"
-        edit: "Редактировать"
+        edit: "Изменить"
         delete: "Удалить"
       new:
         create_test: "Создать новый тест"
@@ -56,6 +58,7 @@ ru:
         create_new_question: "Создать новый вопрос"
         edit: "Редактировать тест"
         back: "Назад на страницу с тестами"
+        passing_time: "Время (мин)"
       form_inline:
         submit: "Сохранить"
     questions:
@@ -127,6 +130,7 @@ ru:
       questions_num: "Количество вопросов"
       actions: "Действия"
       badges: "Список заработанных наград"
+      passing_time: "Время (мин)"
     test:
       no_author: "Автор отсутствует"
       start: "Пройти тест"

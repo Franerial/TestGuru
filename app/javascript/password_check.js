@@ -1,4 +1,4 @@
-import { PasswordConfirmation } from './PasswordConfirmation.js'
+import { PasswordConfirmation } from './utilities/PasswordConfirmation.js'
 
 document.addEventListener('turbolinks:load', function () {
   const reg_form = document.getElementById('new_user_reg_form')

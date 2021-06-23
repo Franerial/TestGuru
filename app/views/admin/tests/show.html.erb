@@ -4,12 +4,20 @@
     <th> <%= t('.level')%> </th>
     <th> <%= t('.category')%> </th>
     <th> <%= t('.author')%> </th>
+    <th> <%= t('.passing_time') %> </th>
   </tr>
   <tr>
     <th> <%= @test.title %> </th>
     <th> <%= test_level(@test) %> </th>
     <th> <%= @test.category.title %> </th>
     <th> <%= @test.author.email %> </th>
+    <th> 
+      <% if @test.passing_time.present? %>
+        <%= @test.passing_time %>
+      <% else %>
+        &#8734
+      <% end %>
+    </th>
   </tr>
 </table>
 <br>

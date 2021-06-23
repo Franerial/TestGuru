@@ -17,4 +17,8 @@ class Test < ApplicationRecord
   scope :hero_level, -> { where(level: 4..Float::INFINITY) }
   scope :tests_by_category, ->(category_title) { joins(:category).where(category: { title: category_title }) }
   scope :tests_titles_by_category, ->(category_title) { tests_by_category((category_title)).order(id: :desc).pluck(:title) }
+
+  def http_end_time
+    (Time.now + self.passing_time.minutes).httpdate unless self.passing_time.nil?
+  end
 end
