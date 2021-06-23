@@ -25,7 +25,7 @@ class TestPassage < ApplicationRecord
     if correct_answer?(answer_ids)
       self.correct_questions += 1
     end
-    mark_as_successfully_passed if self.successfully_passed?
+    mark_as_successfully_passed if successfully_passed?
     save!
   end
 
@@ -42,7 +42,7 @@ class TestPassage < ApplicationRecord
   end
 
   def check_lefted_time
-    self.closed = true if Time.now >= self.remaining_time
+    self.closed = Time.now >= remaining_time
   end
 
   private
@@ -62,7 +62,7 @@ class TestPassage < ApplicationRecord
 
   def before_update_set_next_question
     self.current_question = test.questions.order(:id).where("id > ?", current_question.id).first
-    self.closed = true if completed?
+    self.closed = completed?
   end
 
   def set_remaining_time
